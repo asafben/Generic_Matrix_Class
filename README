@@ -1,0 +1,41 @@
+
+
+****************************************************************************************************
+***********************************     ‫‪Matrix Implementation    ***********************************
+****************************************************************************************************
+emplate class, exceptions, Move Semantics, STL and Multithreading‬‬.
+
+
+Files:
+~~~~~~
+Makefile            -   Compiles project.
+README              -   This file.
+Matrix.hpp          -   Contains matrix's definition and implementation using templates.
+ParallelChecker.cpp - Test Matrix class performance.
+
+ParllaelChecker.cpp Results:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             _______________________________________________________
+            |         Big Dataset       |       Small Dataset       |
+             _______________________________________________________
+            |      *      |      +      |      *      |      +      |
+  __________________________________________________________________
+ |Parallel  |  5.9664sec  |  3.2676sec  |4.0768e-05sec|0.00170345sec|
+  __________________________________________________________________
+ |serial    | 15.2241sec  |0.0111886sec | 1.887e-06sec| 8.04e-07sec |
+  __________________________________________________________________
+
+
+Implementation Details:
+~~~~~~~~~~~~~~~~~~~~~~~
+i)  The program with the smaller input finishes faster as expected, although,
+    running the smaller input should have been faster when multithreading - 
+    the overhead of switching between threads for the small input actually waists time.
+    (There is a very big difference in the sizes of the big and small files.)
+   
+ii) Parallel addition actually takes more time than a serial one (in both cases).
+    That is, because context switching (when computing in parallel) takes a lot of time, more than
+    the time saved when multithreading.
+	When multiplying, we multiply every row with all of the columns, which parallel computing
+    speeds up, even with the cost of the context switch (Computing time of each thread is bigger).
+****************************************************************************************************
