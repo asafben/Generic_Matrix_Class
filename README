@@ -8,10 +8,10 @@ emplate class, exceptions, Move Semantics, STL and Multithreading‬‬.
 
 Files:
 ~~~~~~
-Makefile            -   Compiles project.
-README              -   This file.
-Matrix.hpp          -   Contains matrix's definition and implementation using templates.
-ParallelChecker.cpp - Test Matrix class performance.
+Makefile              -   Compiles project.
+README                -   This file.
+Matrix.hpp            -   Contains matrix's definition and implementation using templates.
+ParallelChecker.cpp   -   Test Matrix class performance.
 
 ParllaelChecker.cpp Results:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -22,7 +22,7 @@ ParllaelChecker.cpp Results:
   __________________________________________________________________
  |Parallel  |  5.9664sec  |  3.2676sec  |4.0768e-05sec|0.00170345sec|
   __________________________________________________________________
- |serial    | 15.2241sec  |0.0111886sec | 1.887e-06sec| 8.04e-07sec |
+ |Serial    | 15.2241sec  |0.0111886sec | 1.887e-06sec| 8.04e-07sec |
   __________________________________________________________________
 
 
